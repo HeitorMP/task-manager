@@ -1,0 +1,64 @@
+<div class="container">
+  <!-- Logout Button (Top Right) -->
+  <button class="logout-button" (click)="logout()">Logout</button>
+
+  <!-- Task List Container -->
+  <div class="task-list-container">
+    <h2>Task List</h2>
+
+    <!-- Filter Section with "Search by" Title -->
+    <div class="search-by">
+      <h3>Search by</h3>
+      <div class="filter-buttons">
+        <button (click)="filterTasks('Pending')">Pending</button>
+        <button (click)="filterTasks('In Progress')">In Progress</button>
+        <button (click)="filterTasks('Completed')">Completed</button>
+        <button (click)="filterTasks('')">All</button> <!-- To show all tasks -->
+      </div>
+    </div>
+
+    <!-- Form to Add New Task -->
+    <div *ngIf="!selectedTask" class="add-task-form">
+      <input [(ngModel)]="newTask.title" placeholder="Title" />
+      <input [(ngModel)]="newTask.description" placeholder="Description" />
+      <select [(ngModel)]="newTask.status">
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button (click)="addTask()">Add Task</button>
+    </div>
+
+    <!-- Display Tasks -->
+    <div *ngIf="tasks.length > 0" class="task-cards-container">
+      <div class="task-card" *ngFor="let task of filteredTasks">
+        <div class="task-card-header">
+          <h3>{{ task.title }}</h3>
+          <span class="task-status" [ngClass]="{
+            'pending': task.status === 'Pending',
+            'in-progress': task.status === 'In Progress',
+            'completed': task.status === 'Completed'
+          }">{{ task.status }}</span>
+        </div>
+        <p class="task-description">{{ task.description }}</p>
+        <div class="task-card-footer">
+          <button (click)="editTask(task.id)">Edit</button>
+          <button (click)="deleteTask(task.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Task Form -->
+    <div *ngIf="selectedTask" class="edit-task-container">
+      <input [(ngModel)]="selectedTask.title" placeholder="Title" />
+      <input [(ngModel)]="selectedTask.description" placeholder="Description" />
+      <select [(ngModel)]="selectedTask.status">
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button (click)="updateTask()">Save Changes</button>
+      <button (click)="selectedTask = null">Cancel</button>
+    </div>
+  </div>
+</div>

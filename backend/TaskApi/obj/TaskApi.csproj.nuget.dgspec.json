@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/hmaciel-/Development/ASP-Angular/task-manager/backend/TaskApi/TaskApi.csproj": {}
+  },
+  "projects": {
+    "/home/hmaciel-/Development/ASP-Angular/task-manager/backend/TaskApi/TaskApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/hmaciel-/Development/ASP-Angular/task-manager/backend/TaskApi/TaskApi.csproj",
+        "projectName": "TaskApi",
+        "projectPath": "/home/hmaciel-/Development/ASP-Angular/task-manager/backend/TaskApi/TaskApi.csproj",
+        "packagesPath": "/home/hmaciel-/.nuget/packages/",
+        "outputPath": "/home/hmaciel-/Development/ASP-Angular/task-manager/backend/TaskApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/hmaciel-/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

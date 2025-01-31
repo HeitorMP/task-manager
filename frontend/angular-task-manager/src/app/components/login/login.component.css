@@ -1,0 +1,84 @@
+/* Container do formulário */
+.form-container {
+    margin: 40px auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 400px;
+    background-color: #f4f8fb;
+    text-align: center;
+  }
+  
+  /* Título do Formulário */
+  .form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Grupo de campos */
+  .form-group {
+    margin: 15px 0;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  /* Estilo do botão */
+  button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Mensagem de erro ou sucesso */
+  .message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+  }
+  
+  p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  p button {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  p button:hover {
+    color: #0056b3;
+  }
+  
